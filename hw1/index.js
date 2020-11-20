@@ -49,41 +49,78 @@
 const usersArr = [
     {
         name:'Vika',
-        age:18,
         sername:'Romantsova',
-        birhsday:'30.11.2001'
+        birhsday:'2001',
+        favorite: ['пицца', 'паста']
     },
     {
         name:'Oleg',
-        age:38,
         sername:'firsov',
-        birhsday:'30.11.1987'
+        birhsday:'1987',
+        favorite: ['стейк', 'паста']
     },
     {
         name:'Vasya',
-        age:30,
         sername:'Olegovich',
-        birhsday:'30.1.1990'
+        birhsday:'1990',
+        favorite: ['пицца', 'пирог']
     },
     {
         name:'Petya',
-        age:22,
         sername:'Romanov',
-        birhsday:'30.11.1998'
+        birhsday:'1998',
+        favorite: ['пирог', 'стейк', 'салат']
     }
 ]
 // const getUser = function (index){
     
 //     console.log(usersArr[index]);
 // }
-const getUser = function(name){
-    for(let i = 0; i < usersArr.length; i++){
+// const getUser = function(name){
+//     for(let i = 0; i < usersArr.length; i++){
+//         const user = usersArr[i];
+//         if(name == user.name){
+//             console.log(user);
+//             break;
+//         }
+//         continue;
+//     }
+// }
+
+
+// const getUsers = function(age){
+//     let newArr = [];
+//     for(let i = 0; i< usersArr.length; i++){
+//         const user = usersArr[i];
+//         if(age <= user.age ){
+//              newArr.push(user);
+//         }
+//     }
+//     console.log(newArr);
+// }
+// getUsers(25)
+// const getUsers = function(age){
+//     let newArr = [];
+//     for(let i = 0; i< usersArr.length; i++){
+//         const user = usersArr[i];
+//         newAge = 2020 - user.birhsday;
+//         if(newAge <= age){
+//             newArr.push(user);
+//         }
+//     }
+//     console.log(newArr);
+// }
+
+const getUsers = function(dish){
+    let newArr = [];
+    for(let i = 0; i< usersArr.length; i++){
         const user = usersArr[i];
-        if(name == user.name){
-            console.log(user);
-            break;
+        for(let j = 0; j< user.favorite.length; j++){
+            if(dish == user.favorite[j]){
+                newArr.push(user)
+                break;
+            }
         }
-        continue;
     }
-   //console.log(user)
+console.log(newArr);
 }
