@@ -20,13 +20,28 @@ let user_Vasya = {
         ch1:'petya',
         ch2:'oleg'
     },
-    childrens_age: [12,19]
+    childrens_age: [12,19],
+    getall: function () {
+        const template = `
+        name: ${user_Vasya.name}
+        age: ${user_Vasya.age}
+        man: ${user_Vasya.man}
+        children_name: ${user_Vasya.childrens_name.ch1}
+        children_age: ${user_Vasya.childrens_age}
+
+        `
+        console.log(template)
+        return;
+    }
+    
 }
+user_Vasya.getall()
 
 //hw1.3
- let getuser = function() {
-   console.log(user_Vasya);
-   return;
+//  let getuser = function() {
+//    console.log(user_Vasya);
+//    return;
 
-}
-getuser();
+// }
+// getuser();
+
